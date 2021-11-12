@@ -1,6 +1,5 @@
 package mx.parrot14.util.web;
 
-import mx.parrot14.util.web.extractors.DataExtractor;
 import mx.parrot14.util.web.validators.Validator;
 
 public class FormParam {
