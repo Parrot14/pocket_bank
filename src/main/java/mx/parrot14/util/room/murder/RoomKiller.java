@@ -5,8 +5,8 @@ import java.util.Timer;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import mx.parrot14.util.room.interfaces.Room;
-import mx.parrot14.util.room.interfaces.RoomManager;
+import mx.parrot14.util.room.Room;
+import mx.parrot14.util.room.RoomManager;
 
 public class RoomKiller {
     private final Timer timer;

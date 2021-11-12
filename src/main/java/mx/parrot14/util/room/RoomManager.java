@@ -1,4 +1,4 @@
-package mx.parrot14.util.room.interfaces;
+package mx.parrot14.util.room;
 
 import java.util.Map;
 

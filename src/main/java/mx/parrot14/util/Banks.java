@@ -4,8 +4,8 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import mx.parrot14.util.room.interfaces.Room;
-import mx.parrot14.util.room.interfaces.RoomManager;
+import mx.parrot14.util.room.Room;
+import mx.parrot14.util.room.RoomManager;
 import mx.parrot14.util.room.murder.RoomKiller;
 
 public class Banks implements RoomManager {

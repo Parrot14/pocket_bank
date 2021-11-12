@@ -2,7 +2,7 @@ package mx.parrot14.util;
 
 import java.time.LocalDateTime;
 
-import mx.parrot14.util.room.interfaces.Room;
+import mx.parrot14.util.room.Room;
 
 public class Bank implements Room {
 

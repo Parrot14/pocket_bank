@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TimerTask;
 
-import mx.parrot14.util.room.interfaces.Room;
-import mx.parrot14.util.room.interfaces.RoomManager;
+import mx.parrot14.util.room.Room;
+import mx.parrot14.util.room.RoomManager;
 
 public class TimedCheck extends TimerTask {
     private final RoomManager manager;

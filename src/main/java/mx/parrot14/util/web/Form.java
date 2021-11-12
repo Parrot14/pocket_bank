@@ -1,12 +1,12 @@
 package mx.parrot14.util.web;
 
-import mx.parrot14.util.web.extractors.DataExtractor;
+import mx.parrot14.util.web.extractors.Extractor;
 
 public class Form<T> {
-    private final DataExtractor<T> extractor;
+    private final Extractor<T> extractor;
     private final FormParam[] params;
 
-    public Form(DataExtractor<T> extractor, FormParam... params) {
+    public Form(Extractor<T> extractor, FormParam... params) {
         this.extractor = extractor;
         this.params = params;
     }
