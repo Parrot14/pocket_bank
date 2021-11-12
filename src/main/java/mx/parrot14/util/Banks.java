@@ -8,7 +8,7 @@ import mx.parrot14.util.room.interfaces.Room;
 import mx.parrot14.util.room.interfaces.RoomManager;
 import mx.parrot14.util.room.murder.RoomKiller;
 
-public class Banks implements RoomManager{
+public class Banks implements RoomManager {
     ConcurrentHashMap<String, Bank> banks;
 
     RoomKiller roomKiller;

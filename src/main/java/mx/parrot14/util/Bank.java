@@ -4,8 +4,7 @@ import java.time.LocalDateTime;
 
 import mx.parrot14.util.room.interfaces.Room;
 
-public class Bank implements Room{
-
+public class Bank implements Room {
 
     LocalDateTime executionSchedule;
 
@@ -15,7 +14,7 @@ public class Bank implements Room{
     }
 
     @Override
-    public boolean letItDie() {
+    public Boolean letItDie() {
         // TODO Auto-generated method stub
         return false;
     }
