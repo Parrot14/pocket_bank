@@ -1,31 +1,11 @@
 package mx.parrot14.util;
 
-import java.util.Collections;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-import mx.parrot14.util.room.Room;
 import mx.parrot14.util.room.RoomManager;
-import mx.parrot14.util.room.murder.RoomKiller;
 
-public class Banks implements RoomManager {
-    ConcurrentHashMap<String, Bank> banks;
-
-    RoomKiller roomKiller;
+public class Banks extends RoomManager {
 
     public Banks() {
-        this.banks = new ConcurrentHashMap<>();
-        this.roomKiller = new RoomKiller(this);
+        super();
     }
-
-    @Override
-    public Room removeRoom(String code) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Map<String, Room> getBanks() {
-        return Collections.unmodifiableMap(banks);
-    }
+    
 }

@@ -1,21 +1,18 @@
 package mx.parrot14.util;
 
-import java.time.LocalDateTime;
-
 import mx.parrot14.util.room.Room;
 
-public class Bank implements Room {
+public class Bank extends Room {
 
-    LocalDateTime executionSchedule;
+    public Bank(String ownerName){
+        super(ownerName,new User() {
 
-    @Override
-    public LocalDateTime getExecutionSchedule() {
-        return executionSchedule;
-    }
-
-    @Override
-    public Boolean letItDie() {
-        // TODO Auto-generated method stub
-        return false;
+            @Override
+            public void die() {
+                // TODO Auto-generated method stub
+                
+            }
+            
+        });
     }
 }

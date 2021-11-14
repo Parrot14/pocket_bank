@@ -2,7 +2,7 @@ package mx.parrot14.util.web;
 
 import mx.parrot14.util.web.extractors.Extractor;
 
-public class Form<T> {
+public abstract class Form<T> {
     private final Extractor<T> extractor;
     private final FormParam[] params;
 

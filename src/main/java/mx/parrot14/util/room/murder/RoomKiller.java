@@ -15,6 +15,15 @@ public class RoomKiller {
 
     private final RoomManager manager;
 
+    /**
+     * Creates the process required to destroy rooms
+     * after the owner absence, uses the method {@link mx.parrot14.util.room.Room#getExecutionSchedule()}
+     * to check and try to kill the room,with precision on 1 minute
+     * @param manager RoomManager or child
+     * @see RoomManager
+     * @see Timer
+     * @see TimedCheck
+     */
     public RoomKiller(RoomManager manager){
         this.manager = manager;
 
@@ -25,6 +34,14 @@ public class RoomKiller {
         timer.schedule(tcheck, 6_0000L);
     }
 
+    /**
+     * Uses a list of {@code String} that contains the codes of the
+     * rooms to kill, removes the room {@link mx.parrot14.util.room.RoomManager#removeRoom(String)}
+     * and execute the method {@link mx.parrot14.util.room.Room#letItDie()} of every removed {@code Room}
+     * instance
+     * @param murderList list of the codes of the rooms to kill
+     * @see Room
+     */
     protected void submitKillingJob(ArrayList<String> murderList) {
         murderList.forEach((toKill)->{
             Room r = manager.removeRoom(toKill);

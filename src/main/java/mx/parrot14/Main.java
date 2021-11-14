@@ -1,10 +1,11 @@
 package mx.parrot14;
 
 import io.javalin.Javalin;
+import mx.parrot14.util.Banks;
 import mx.parrot14.util.endpoints.DefaultEndpoints;
+import mx.parrot14.util.endpoints.RoomEndpoints;
 
 public class Main {
-
     public static void main(String[] args) {
         startServer(8080);
     }
@@ -17,32 +18,33 @@ public class Main {
                 userConfig.directory = "/static";
             });
         });
+        Banks manager = new Banks();
 
         web.routes(new DefaultEndpoints());
+        web.routes(new RoomEndpoints(manager));
 
         web.start(port);
     }
 
     public static class URL {
         public static class WEB {
-            public static final String 
-                    INDEX = "/";
+            public static final String INDEX = "/";
 
             public static class ROOM {
                 public static final String 
-                        CREATE = "/room/create/:room", 
-                        JOIN = "/room/join/:room",
-                        DATA = "/room/data/:room", 
-                        DEBT = "/room/debt/:room", 
-                        WAGE = "/room/wage/:room",
-                        PAY = "/room/pay/:room", 
-                        LEAVE = "/room/leave/:room";
+                        CREATE_JOIN = "/room",
+                        DATA = "/room/data", 
+                        PAY = "/room/pay", 
+                        WAGE = "/room/wage",
+                        RENT = "/room/rent", 
+                        TAX = "/room/tax", 
+                        LEAVE = "/room/leave",
+                        SSE = "/room/sse";
             }
         }
 
         public static class Template {
-            public static final String 
-                    INDEX = "templates/index.peb";
+            public static final String INDEX = "templates/index.peb";
         }
     }
 }

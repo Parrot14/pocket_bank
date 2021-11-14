@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    Hello World!
+    <form action="/room" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name">
+        <label for="room">Cuarto</label>
+        <input type="text" name="room" id="room">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
